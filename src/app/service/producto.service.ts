@@ -13,6 +13,6 @@ export class ProductoService {
   ) { }
 
   getAll() {
-    this.http.get<any[]>(this.api)
+    this.http.get(this.api)
   }
 }

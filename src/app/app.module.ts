@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +30,8 @@ import { CarritoService } from './service/carrito.service';
     NgbModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule,
+    
   ],
   providers: [
     UsuarioService,

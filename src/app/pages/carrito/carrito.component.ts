@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CarritoService } from 'src/app/service/carrito.service';
 
 @Component({
   selector: 'app-carrito',
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class CarritoComponent implements OnInit {
 
   constructor(
-  
+    private carritoService: CarritoService,
   ) { }
 
   ngOnInit(): void {
