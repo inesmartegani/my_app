@@ -12,6 +12,10 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
 import { LoginComponent } from './pages/login/login.component';
 
+import { UsuarioService } from './service/usuario.service';
+import { ProductoService} from './service/producto.service';
+import { CarritoService } from './service/carrito.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserAnimationsModule,
     MatButtonModule,
   ],
-  providers: [],
+  providers: [
+    UsuarioService,
+    ProductoService,
+    CarritoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
