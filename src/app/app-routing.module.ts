@@ -4,8 +4,14 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import {ErrorComponent} from './pages/error/error.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'productos',
+    pathMatch: 'full'
+  },
   {
     path: 'usuarios',
     component: UsuariosComponent
@@ -21,6 +27,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: '**',
+    component:ErrorComponent,
+
   },
 ];
 

@@ -19,6 +19,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavItem } from './class/nav-item';
 import { FormsModule } from '@angular/forms';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     HeaderComponent,
     NavbarComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
