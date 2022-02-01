@@ -15,6 +15,10 @@ import { LoginComponent } from './pages/login/login.component';
 import { UsuarioService } from './service/usuario.service';
 import { ProductoService} from './service/producto.service';
 import { CarritoService } from './service/carrito.service';
+import { HeaderComponent } from './components/header/header.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { NavItem } from './class/nav-item';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { CarritoService } from './service/carrito.service';
     UsuariosComponent,
     ProductosComponent,
     CarritoComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

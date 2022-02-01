@@ -1,21 +1,20 @@
-<div>
-  <header>
-    <h3>Menú de navegación</h3>
-  </header>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col">
+      <app-header></app-header>
+    </div>
+  </div>
 
-  <!-- falta hacer la lógica del boton en un componente boton (carpeta components!!!!-->
-  <nav class="nav"> 
-    <a mat-button router-Link="usuarios">Usuarios</a>
-    <a mat-button router-Link="productos">Productos</a>
-    <a mat-button router-Link="carrito">Carrito</a>
-    <a mat-button router-Link="login">Login</a>
-  </nav>
-
-
-  <section class= "nav section"> Sección principal
-    <router-outlet></router-outlet>
-  </section>
+  <div class="row justify-content-center">
+    <div class="col">
+      <app-navbar label="#AP | ANGULAR" [items]="items"></app-navbar>
+    </div>
+  </div>
+ 
+   <div class="row justify-content-center">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </div>
-
-
 
