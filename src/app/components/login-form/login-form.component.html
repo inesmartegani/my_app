@@ -1,0 +1,18 @@
+<form #prodForm="ngForm" (ngSubmit)="onSubmit(prodForm)" class="row g-3">
+    <div class="col-auto">
+      <!--<label for="staticEmail2" class="visually-hidden">Email</label>-->
+      <input type="text" class="form-control" id="staticEmail2" placeholder="email"
+      [(ngModel)]="user.email" #email="ngModel" name="email">
+    </div>
+    <div class="col-auto">
+      <!--<label for="inputPassword2" class="visually-hidden">Password</label>-->
+      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-3">Confirm</button>
+    </div>
+
+    <div class="col-auto">
+        <button type="button" class="btn btn-danger mb-3" (click)="prodForm.reset()">Reset</button>
+    </div>
+  </form>

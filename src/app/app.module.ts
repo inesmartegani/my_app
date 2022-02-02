@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,9 +16,9 @@ import { ProductoService} from './service/producto.service';
 import { CarritoService } from './service/carrito.service';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { NavItem } from './class/nav-item';
 import { FormsModule } from '@angular/forms';
 import { ErrorComponent } from './pages/error/error.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +30,16 @@ import { ErrorComponent } from './pages/error/error.component';
     HeaderComponent,
     NavbarComponent,
     ErrorComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatButtonModule,
     HttpClientModule,
-    
+    FormsModule,
+
   ],
   providers: [
     UsuarioService,
