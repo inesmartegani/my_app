@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/class/producto';
 import { ProductoService } from 'src/app/service/producto.service';
 
+
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
@@ -29,7 +30,7 @@ export class ProductosComponent implements OnInit {
           this.productos = prods; 
           }, e => {
           console.log(e);
-        
+          this.loading = false;
         })
-  }
+  };
 }

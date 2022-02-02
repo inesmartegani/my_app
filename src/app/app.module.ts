@@ -19,6 +19,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
 import { ErrorComponent } from './pages/error/error.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { ProdCardComponent } from './components/prod-card/prod-card.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { LoginFormComponent } from './components/login-form/login-form.component
     NavbarComponent,
     ErrorComponent,
     LoginFormComponent,
+    SpinnerComponent,
+    ProdCardComponent,
   ],
   imports: [
     BrowserModule,

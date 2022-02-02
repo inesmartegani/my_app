@@ -1,1 +1,10 @@
-<p>productos works!</p>
+<div class="row">
+    <div *ngIf="loading" class="col">
+        <app-spinner></app-spinner>
+    </div>
+
+    <div class="col-12 col-sm-4" *ngFor="let prod of productos">
+        <prod-card [prod]="prod"></prod-card>
+
+    </div>
+</div>
