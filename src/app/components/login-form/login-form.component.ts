@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/class/user';
 
 @Component({
@@ -7,17 +7,20 @@ import { User } from 'src/app/class/user';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent implements OnInit {
+  @Input() user: User = new User();
+// y agregar Input al import de arriba!
 
-  user: User = new User();
+  @Output() enviar = new EventEmitter<User>();
+// y agregar EventEmitter al import de arriba
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(value:any){
-    console.log('onSubmit()'); 
-    console.dir(value);
+  onSubmit(){
+    this.enviar.emit(this.user);
   }
+
 }
 

@@ -1,15 +1,31 @@
-<form #prodForm="ngForm" (ngSubmit)="onSubmit(prodForm)" class="row g-3">
+<form #prodForm="ngForm" (ngSubmit)="onSubmit()" class="row g-3">
     <div class="col-auto">
       <!--<label for="staticEmail2" class="visually-hidden">Email</label>-->
+      
       <input type="text" class="form-control" id="staticEmail2" placeholder="email"
-      [(ngModel)]="user.email" #email="ngModel" name="email">
+      required email
+      [(ngModel)]="user.email" #email="ngModel" name="email"
+      >
+      <div *ngIf="!email.valid && !email.pristine" class="alert alert-danger" role="alert">
+        El campo es requerido y tiene que ser un email
+      </div>
     </div>
     <div class="col-auto">
       <!--<label for="inputPassword2" class="visually-hidden">Password</label>-->
-      <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+      
+      <input type="password" class="form-control" id="inputPassword2" placeholder="Password"
+      required minlength="6"
+      [(ngModel)]="user.password" #password="ngModel" name="password"
+      >
+      <div *ngIf="!password.valid && !password.pristine class" class="alert alert-danger" role="alert">
+        El campo es requerido y tiene que ser mayor a 5 caracteres
+      </div>
+      
     </div>
     <div class="col-auto">
-      <button type="submit" class="btn btn-primary mb-3">Confirm</button>
+      <button type="submit" class="btn btn-primary mb-3"
+      [disabled]="!prodForm.valid"
+      >Confirm</button>
     </div>
 
     <div class="col-auto">
