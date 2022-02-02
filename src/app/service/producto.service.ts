@@ -1,18 +1,25 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Producto } from '../class/producto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
 
-  private api = 'https://fakestoreapi.com/products';
-
   constructor(
-    private http: HttpClient,
+    private httpService: HttpClient,
   ) { }
 
-  getAll() {
-    this.http.get(this.api)
+  /**
+   * 
+   * @returns
+   */
+
+  getAll(): Observable<Producto[]> { // import Producto arriba
+    const url = 'https://fakestoreapi.com/products';
+
+    return this.httpService.get<Producto[]>(url);
   }
 }
