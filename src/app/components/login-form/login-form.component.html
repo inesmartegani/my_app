@@ -17,7 +17,7 @@
       required minlength="6"
       [(ngModel)]="user.password" #password="ngModel" name="password"
       >
-      <div *ngIf="!password.valid && !password.pristine class" class="alert alert-danger" role="alert">
+      <div *ngIf="!password.valid && !password.pristine" class="alert alert-danger" role="alert">
         El campo es requerido y tiene que ser mayor a 5 caracteres
       </div>
       
